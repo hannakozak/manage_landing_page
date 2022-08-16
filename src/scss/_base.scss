@@ -1,3 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+// Primary Colors
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+// Neutral Colors
+$grayish-blue: hsl(227, 12%, 61%);
+$dark-blue: hsl(233, 12%, 13%);
+$pale-red: hsl(13, 100%, 96%);
+$light-gray: hsl(0, 0%, 98%);
+
+// Font
+$font-primary: "Be Vietnam Pro", sans-serif;
+
+// Size
+$btn-text: 0.8rem;
+
+// Responsive breakpoints
+$breakpoint-mobile: 24em; // 375px
+$breakpoint-desktop: 90em; // 1440px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
 body {
-  background-color: green;
+  font-family: $font-primary;
+  background-color: $bright-red;
+  font-weight: 400;
+  line-height: 1.6;
 }
