@@ -41,9 +41,10 @@
     padding: 1rem;
     color: $dark-blue;
     font-family: $font-primary;
-    font-weight: 700;
-    font-size: 1.8rem;
+    font-weight: 500;
+    font-size: 1.6rem;
     text-decoration: none;
+    transition: all 0.5s ease-out;
 
     @media (min-width: $breakpoint-desktop) {
       font-weight: 700;

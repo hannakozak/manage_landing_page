@@ -9,9 +9,10 @@
   @media (min-width: $breakpoint-desktop) {
     margin: 8rem 18rem;
   }
-  
+
   &__button {
     display: none;
+    padding: 1.3rem 3rem;
     @media (min-width: $breakpoint-desktop) {
       display: inline-block;
     }
