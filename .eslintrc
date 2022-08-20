@@ -1,6 +1,5 @@
 {
   "extends": ["airbnb", "prettier"],
-
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
@@ -9,5 +8,9 @@
         "endOfLine": "auto"
       }
     ]
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }

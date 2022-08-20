@@ -1,20 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
-
 // Primary Colors
 $bright-red: hsl(12, 88%, 59%);
 $dark-blue: hsl(228, 39%, 23%);
 
 // Neutral Colors
 $grayish-blue: hsl(227, 12%, 61%);
-$dark-blue: hsl(233, 12%, 13%);
+$darker-blue: hsl(233, 12%, 13%);
 $pale-red: hsl(13, 100%, 96%);
 $light-gray: hsl(0, 0%, 98%);
 
 // Font
 $font-primary: "Be Vietnam Pro", sans-serif;
-
-// Size
-$btn-text: 0.8rem;
 
 // Responsive breakpoints
 $breakpoint-mobile: 24em; // 375px
@@ -35,7 +30,14 @@ html {
 
 body {
   font-family: $font-primary;
-  background-color: $bright-red;
+  font-size: 1.6rem;
+  background-image: url("images/bg-tablet-pattern.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right -10rem top -6rem;
   font-weight: 400;
   line-height: 1.6;
+  @media (min-width: $breakpoint-desktop) {
+    background-size: 50%;
+  }
 }
