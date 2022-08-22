@@ -64,10 +64,10 @@
   left: 2rem;
   padding: 4rem;
   border-radius: 1rem;
-  background-color: white;
+  background-color: $white;
   transform: translateY(0%);
   transition: transform 0.2s;
- }
+}
 
 .overlay {
   position: fixed;
