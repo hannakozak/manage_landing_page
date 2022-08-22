@@ -1,9 +1,8 @@
 %heading {
-  font-size: 3.6rem;
   line-height: 1.4;
   font-family: $font-primary;
   font-weight: 700;
-  letter-spacing: -0.1rem;
+  color: $dark-blue;
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 5rem;
@@ -12,23 +11,49 @@
 
 .heading-1 {
   @extend %heading;
-  color: $dark-blue;
+  font-size: 3.6rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 5rem;
+  }
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 3rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 4rem;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 1.6rem;
 }
 
 %paragraph {
-  font-size: 1.6rem;
-  line-height: 1.6;
   font-family: $font-primary;
   font-weight: 400;
   color: $grayish-blue;
   letter-spacing: 0.1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+.paragraph-1 {
+  @extend %paragraph;
+  font-size: 1.6rem;
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 2rem;
   }
 }
-.paragraph {
+
+.paragraph-2 {
   @extend %paragraph;
+  font-size: 1.4rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.6rem;
+  }
 }

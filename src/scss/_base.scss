@@ -35,9 +35,10 @@ body {
   background-image: url("images/bg-tablet-pattern.svg");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: right -9rem top -5rem;
+  background-position: right -4.5rem top -1.5rem;
   line-height: 1.6;
   @media (min-width: $breakpoint-desktop) {
     background-size: 50%;
+    background-position: right -6rem top -14rem;
   }
 }

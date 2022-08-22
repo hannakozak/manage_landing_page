@@ -35,6 +35,9 @@
     @media (min-width: $breakpoint-desktop) {
       text-align: left;
       width: 45%;
+      & p {
+        padding-right: 15rem;
+      }
     }
   }
 

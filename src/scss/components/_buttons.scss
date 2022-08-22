@@ -1,11 +1,10 @@
 %button {
   color: $white;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 700;
   background-color: $bright-red;
   border: 1px solid $bright-red;
   border-radius: 20px;
-  padding: 1.3rem 4rem;
   transition: all 0.5s ease-out;
 
   @media (min-width: $breakpoint-desktop) {
@@ -19,12 +18,19 @@
   }
 }
 
-.button {
+.button-large {
   @extend %button;
+  padding: 1.3rem 4rem;
 }
 
-.header__button {
+.button-small {
   @extend %button;
+  font-size: 1.6rem;
+  padding: 1.3rem 2.5rem;
+  margin-right: 2rem;
+}
+
+.button-header {
   display: none;
   @media (min-width: $breakpoint-desktop) {
     display: inline-block;

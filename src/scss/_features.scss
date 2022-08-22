@@ -1,0 +1,69 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12rem 2rem;
+
+  &::after {
+    @media (min-width: $breakpoint-desktop) {
+      position: absolute;
+      content: "";
+      background-image: url("images/bg-tablet-pattern.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: -1;
+      top: 110rem;
+      left: -40rem;
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 8rem 14rem;
+  }
+
+  &__about {
+    text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      text-align: left;
+      width: 45%;
+
+      & p {
+        padding-right: 20rem;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 3rem;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 45%;
+      margin-top: 0rem;
+
+      & p {
+        padding-left: 9rem;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $pale-red;
+    border-radius: 20px;
+    margin-right: -5rem;
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: transparent;
+    }
+  }
+}
