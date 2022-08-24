@@ -23,6 +23,18 @@
   padding: 1.3rem 4rem;
 }
 
+.button-revert {
+  @extend %button;
+  padding: 1.3rem 4rem;
+  color: $bright-red;
+  background-color: $white;
+  &:hover {
+    background-color: $white;
+    color: lighten($bright-red, 20);
+    box-shadow: none;
+  }
+}
+
 .button-small {
   @extend %button;
   font-size: 1.6rem;
