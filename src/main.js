@@ -22,3 +22,53 @@ function toggleMenu() {
 }
 
 navigationIcon.addEventListener("click", toggleMenu);
+
+const wrapper = document.querySelector(".testimonials__wrapper");
+const indicators = [...document.querySelectorAll(".indicators button")];
+const thumbs = [...document.querySelectorAll(".testimonials__thumb img")];
+const cards = [...document.querySelectorAll(".testimonials__card")];
+
+let currentTestimonial = 0; // Default 0
+
+function myFunction(x) {
+  if (x.matches) {
+    window.setInterval(() => {
+      if (wrapper.classList.contains("second")) {
+        wrapper.classList.remove("second");
+        wrapper.classList.add("third");
+      }
+    }, 2000);
+    window.setInterval(() => {
+      if (wrapper.classList.contains("first")) {
+        wrapper.classList.remove("first");
+        wrapper.classList.add("second");
+      }
+    }, 4000);
+    window.setInterval(() => {
+      if (wrapper.classList.contains("third")) {
+        wrapper.classList.remove("third");
+        wrapper.classList.add("fourth");
+      }
+    }, 6000);
+
+    window.setInterval(() => {
+      if (wrapper.classList.contains("fourth")) {
+        wrapper.classList.remove("fourth");
+        wrapper.classList.add("first");
+      }
+    }, 8000);
+  } else {
+    indicators.forEach((item, i) => {
+      item.addEventListener("click", () => {
+        indicators[currentTestimonial].classList.remove("active");
+        wrapper.style.marginLeft = `-${200 * i}%`;
+        item.classList.add("active");
+        currentTestimonial = i;
+      });
+    });
+  }
+}
+
+const x = window.matchMedia("(min-width: 1440px)");
+myFunction(x); // Call listener function at run time
+x.addListener(myFunction); // Attach listener function on state changes

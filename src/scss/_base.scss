@@ -37,6 +37,7 @@ body {
   background-repeat: no-repeat;
   background-position: right -4.5rem top -1.5rem;
   line-height: 1.6;
+  overflow-x: hidden;
   @media (min-width: $breakpoint-desktop) {
     background-size: 50%;
     background-position: right -6rem top -14rem;
