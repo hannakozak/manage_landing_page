@@ -26,20 +26,72 @@
   &__searchBar {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+    & button:hover {
+      box-shadow: none;
+    }
     @media (min-width: $breakpoint-desktop) {
       grid-column: 3 / 4;
       grid-row: 1 / 2;
       justify-self: end;
     }
   }
-  & input {
-    border-radius: 2rem;
-    font-size: 1.6rem;
-    padding: 1.3rem 1.5rem;
-    margin-right: 0.5rem;
-    color: $bright-red;
-    font-size: 1.2rem;
-    font-weight: 700;
+  & form {
+    > div {
+      position: relative;
+      > label {
+        font-weight: bold;
+        position: absolute;
+        color: $grayish-blue;
+        font-size: 1.2rem;
+        font-weight: 700;
+        top: 15px;
+        left: 20px;
+      }
+
+      > input[type="email"] {
+        border-radius: 2rem;
+        padding: 1.3rem 1.5rem;
+        margin-right: 0.5rem;
+        &:focus {
+          outline: 0;
+          color: $bright-red;
+          font-weight: 700;
+          & + label {
+            opacity: 0;
+          }
+        }
+        &:valid {
+          & + label {
+            opacity: 0;
+          }
+        }
+
+        &:invalid:not(:focus):not(:placeholder-shown) {
+          & + label {
+            opacity: 0;
+          }
+        }
+
+        &:invalid:focus:not(:placeholder-shown) {
+          & ~ .requirements {
+            max-height: 200px;
+            padding: 0 30px 20px 50px;
+            & + label {
+              opacity: 0;
+            }
+          }
+        }
+      }
+      .requirements {
+        padding: 0 30px 0 50px;
+        color: #999;
+        max-height: 0;
+        transition: 0.28s;
+        overflow: hidden;
+        color: $bright-red;
+        font-style: italic;
+      }
+    }
   }
 
   &__navigation {
@@ -82,6 +134,7 @@
       padding: 1rem 0rem;
       &:hover {
         color: $bright-red;
+        cursor: pointer;
       }
     }
   }
@@ -89,15 +142,10 @@
   &__social {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
-    img {
-      width: 6rem;
-      padding: 1rem;
-      &:hover {
+    svg {
+      margin: 0.5rem;
+      & path:hover {
         fill: $bright-red;
-      }
-      @media (min-width: $breakpoint-desktop) {
-        width: 3rem;
-        padding: 0.5rem;
       }
     }
     @media (min-width: $breakpoint-desktop) {
@@ -133,6 +181,18 @@
       grid-column: 3 / 4;
       grid-row: 2 / 3;
       text-align: right;
+    }
+  }
+
+  &__email {
+    display: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+      color: $bright-red;
+      font-size: 1.2rem;
+      font-style: italic;
+      padding-left: 1rem;
     }
   }
 }
