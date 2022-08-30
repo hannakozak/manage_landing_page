@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  margin: 0 4rem;
 
   @media (min-width: $breakpoint-desktop) {
     width: 100vw;

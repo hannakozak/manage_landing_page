@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  width: 100vw;
+  overflow-x: hidden;
 
   &::after {
     position: absolute;
@@ -25,13 +25,14 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin: 8rem 20rem;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 8rem 20rem;
   }
 
   &__text {
     text-align: center;
+    padding: 0 1rem;
     @media (min-width: $breakpoint-desktop) {
       text-align: left;
       width: 45%;

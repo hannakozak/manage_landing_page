@@ -3,13 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 8rem 2rem;
+  margin: 8rem auto;
+  overflow-x: hidden;
+  width: 100vw;
+  padding: 0 2rem;
 
   &::after {
     @media (min-width: $breakpoint-desktop) {
       position: absolute;
       z-index: -1;
-      top: 110rem;
+      top: 120rem;
       left: -40rem;
       width: 50%;
       height: 100%;
@@ -23,7 +26,7 @@
   @media (min-width: $breakpoint-desktop) {
     flex-direction: row;
     align-items: flex-start;
-    margin: 8rem 14rem;
+    padding: 1rem 14rem;
   }
 
   &__about {

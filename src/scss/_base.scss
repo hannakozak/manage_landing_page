@@ -31,12 +31,13 @@ html {
 
 body {
   background-image: url("images/bg-tablet-pattern.svg");
-  background-size: 100%;
+  background-size: 110%;
   background-repeat: no-repeat;
-  background-position: right -4.5rem top -1.5rem;
+  background-position: right -6rem top -2rem;
   font-family: $font-primary;
   font-size: 1.6rem;
   line-height: 1.6;
+  width: 100vw;
   overflow-x: hidden;
   @media (min-width: $breakpoint-desktop) {
     background-size: 50%;
