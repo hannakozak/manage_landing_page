@@ -25,13 +25,11 @@ navigationIcon.addEventListener("click", toggleMenu);
 
 const wrapper = document.querySelector(".testimonials__wrapper");
 const indicators = [...document.querySelectorAll(".indicators button")];
-const thumbs = [...document.querySelectorAll(".testimonials__thumb img")];
-const cards = [...document.querySelectorAll(".testimonials__card")];
 
 let currentTestimonial = 0; // Default 0
 
-function myFunction(x) {
-  if (x.matches) {
+function testimonialSlider(matchMedia) {
+  if (matchMedia.matches) {
     window.setInterval(() => {
       if (wrapper.classList.contains("second")) {
         wrapper.classList.remove("second");
@@ -69,6 +67,5 @@ function myFunction(x) {
   }
 }
 
-const x = window.matchMedia("(min-width: 1440px)");
-myFunction(x); // Call listener function at run time
-x.addListener(myFunction); // Attach listener function on state changes
+const matchMedia = window.matchMedia("(min-width: 1440px)");
+testimonialSlider(matchMedia);

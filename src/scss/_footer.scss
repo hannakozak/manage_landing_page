@@ -5,11 +5,10 @@
   row-gap: 0.5rem;
   justify-items: center;
   align-items: center;
-
-  background-color: $darker-blue;
-  color: $white;
   margin-top: -3rem;
   padding: 5rem 5rem;
+  background-color: $darker-blue;
+  color: $white;
 
   @media (min-width: $breakpoint-desktop) {
     display: grid;
@@ -39,13 +38,13 @@
     > div {
       position: relative;
       > label {
-        font-weight: bold;
         position: absolute;
+        top: 15px;
+        left: 20px;
         color: $grayish-blue;
         font-size: 1.2rem;
         font-weight: 700;
-        top: 15px;
-        left: 20px;
+        font-weight: bold;
       }
 
       > input[type="email"] {
@@ -75,7 +74,7 @@
         &:invalid:focus:not(:placeholder-shown) {
           & ~ .requirements {
             max-height: 200px;
-            padding: 0 30px 20px 50px;
+            padding: 0 30px 20px 10px;
             & + label {
               opacity: 0;
             }
@@ -83,8 +82,7 @@
         }
       }
       .requirements {
-        padding: 0 30px 0 50px;
-        color: #999;
+        padding: 0 30px 0 10px;
         max-height: 0;
         transition: 0.28s;
         overflow: hidden;
@@ -158,6 +156,8 @@
     grid-row: 4 / 5;
     grid-column: 1 / 2;
     text-align: center;
+    width: 100%;
+    height: 100%;
 
     & img {
       @media (min-width: $breakpoint-desktop) {
@@ -189,10 +189,10 @@
 
     @media (min-width: $breakpoint-desktop) {
       display: block;
+      padding-left: 1rem;
       color: $bright-red;
       font-size: 1.2rem;
       font-style: italic;
-      padding-left: 1rem;
     }
   }
 }

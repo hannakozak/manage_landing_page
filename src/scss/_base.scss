@@ -13,8 +13,8 @@ $light-gray: hsl(0, 0%, 98%);
 $font-primary: "Be Vietnam Pro", sans-serif;
 
 // Responsive breakpoints
-$breakpoint-mobile: 24em; // 375px
-$breakpoint-desktop: 90em; // 1440px
+$breakpoint-mobile: 24em;
+$breakpoint-desktop: 90em;
 
 *,
 *::before,
@@ -26,16 +26,16 @@ $breakpoint-desktop: 90em; // 1440px
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  font-size: 62.5%;
 }
 
 body {
-  font-family: $font-primary;
-  font-size: 1.6rem;
   background-image: url("images/bg-tablet-pattern.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: right -4.5rem top -1.5rem;
+  font-family: $font-primary;
+  font-size: 1.6rem;
   line-height: 1.6;
   overflow-x: hidden;
   @media (min-width: $breakpoint-desktop) {

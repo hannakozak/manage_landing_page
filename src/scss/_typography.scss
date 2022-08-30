@@ -1,8 +1,8 @@
 %heading {
+  color: $dark-blue;
   line-height: 1.4;
   font-family: $font-primary;
   font-weight: 700;
-  color: $dark-blue;
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 5rem;
@@ -33,12 +33,12 @@
 }
 
 %paragraph {
-  font-family: $font-primary;
-  font-weight: 400;
-  color: $grayish-blue;
-  letter-spacing: 0.1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  color: $grayish-blue;
+  font-family: $font-primary;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 .paragraph-1 {
   @extend %paragraph;

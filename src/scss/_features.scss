@@ -3,20 +3,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 12rem 2rem;
+  margin: 8rem 2rem;
 
   &::after {
     @media (min-width: $breakpoint-desktop) {
       position: absolute;
-      content: "";
-      background-image: url("images/bg-tablet-pattern.svg");
-      background-size: 100%;
-      background-repeat: no-repeat;
       z-index: -1;
       top: 110rem;
       left: -40rem;
       width: 50%;
       height: 100%;
+      content: "";
+      background-image: url("images/bg-tablet-pattern.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
   }
 
