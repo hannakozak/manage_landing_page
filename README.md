@@ -4,6 +4,10 @@
 
 The challenge is to build out the landing page and get it looking as close to the design as possible.
 
+## Live demo
+
+[https://vermillion-klepon-1cfaef.netlify.app/](https://vermillion-klepon-1cfaef.netlify.app/)
+
 ## Features
 
 - the optimal layout for the site depending on their device's screen size
